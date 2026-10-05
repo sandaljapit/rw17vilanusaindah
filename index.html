@@ -129,6 +129,37 @@ a:focus-visible,button:focus-visible{outline:3px solid #0f9d82;outline-offset:2p
 <div id="h-kontak"></div><div id="g-kontak" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
 <p class="mt-5 text-center text-xs text-slate-500">*Nomor telepon adalah placeholder – ganti pada <code>DATA.kontak</code>.</p></div></section>
 
+<!-- LOKASI -->
+<section id="lokasi" class="sec bg-white relative overflow-hidden">
+<div aria-hidden="true" class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-em-50"></div>
+<div aria-hidden="true" class="absolute -bottom-28 -left-20 w-72 h-72 rounded-full bg-slate-100"></div>
+<svg aria-hidden="true" class="absolute top-10 left-6 w-24 h-24 text-em/20 hidden sm:block" viewBox="0 0 96 96" fill="currentColor"><circle cx="8" cy="8" r="3"/><circle cx="32" cy="8" r="3"/><circle cx="56" cy="8" r="3"/><circle cx="80" cy="8" r="3"/><circle cx="8" cy="32" r="3"/><circle cx="32" cy="32" r="3"/><circle cx="56" cy="32" r="3"/><circle cx="80" cy="32" r="3"/><circle cx="8" cy="56" r="3"/><circle cx="32" cy="56" r="3"/><circle cx="56" cy="56" r="3"/><circle cx="80" cy="56" r="3"/></svg>
+<div class="max-w-7xl mx-auto relative">
+<span class="inline-flex items-center gap-2 bg-em-50 text-em-600 text-sm font-bold px-3.5 py-1.5 rounded-full border border-em/20"><i data-lucide="map-pin" class="w-4 h-4"></i>Lokasi Kami</span>
+<h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-navy">Lokasi RW 17 Vila Nusa Indah</h2>
+<p class="mt-2 text-lg">Temukan lingkungan RW 17 Vila Nusa Indah dengan mudah.</p>
+<div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+<!-- Informasi -->
+<div class="card p-6 sm:p-8 flex flex-col">
+<div class="flex items-start gap-4">
+<span class="w-14 h-14 rounded-2xl bg-navy text-white flex items-center justify-center shrink-0"><i data-lucide="map-pin"></i></span>
+<div><h3 class="text-xl font-extrabold text-navy">RW 17 Vila Nusa Indah</h3><p class="mt-1 text-sm font-semibold text-em-600">Bersama Warga, Membangun Lingkungan Nyaman dan Harmonis</p></div></div>
+<div class="mt-5 rounded-2xl bg-slate-50 border border-slate-200 px-4 py-3 flex items-center gap-3">
+<i data-lucide="locate-fixed" class="w-5 h-5 text-em shrink-0"></i>
+<div class="min-w-0"><span class="block text-xs text-slate-500">Koordinat</span><b id="lok-koor" class="text-navy text-sm break-all"></b></div></div>
+<div class="mt-5"><b class="text-navy">Sekretariat RW 17</b><p>Vila Nusa Indah</p><p id="lok-alamat" class="text-sm text-slate-500 mt-1"></p></div>
+<ul id="lok-info" class="mt-6 grid gap-4"></ul>
+<div class="mt-8 flex flex-col sm:flex-row gap-3 pt-2">
+<a id="lok-maps" target="_blank" rel="noopener noreferrer" class="btn btn-p flex-1"><i data-lucide="map-pin" class="w-5 h-5"></i>Buka di Google Maps</a>
+<a id="lok-dir" target="_blank" rel="noopener noreferrer" class="btn btn-o flex-1"><i data-lucide="navigation" class="w-5 h-5"></i>Petunjuk Arah</a></div>
+</div>
+<!-- Peta -->
+<div class="relative">
+<div class="rounded-2xl border border-slate-200 shadow-lg overflow-hidden bg-slate-100 h-[320px] sm:h-[340px] lg:h-full lg:min-h-[430px]">
+<iframe id="lok-frame" title="Peta lokasi RW 17 Vila Nusa Indah" class="w-full h-full block border-0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<div class="absolute -z-0 -bottom-3 -right-3 w-full h-full rounded-2xl border-2 border-em/20 hidden lg:block pointer-events-none" aria-hidden="true"></div>
+</div></div></div></section>
+
 <!-- CTA PENUTUP -->
 <section id="profil" class="sec"><div class="max-w-5xl mx-auto text-center">
 <span class="mx-auto w-14 h-14 rounded-2xl bg-em-50 text-em flex items-center justify-center"><i data-lucide="hand-heart"></i></span>
@@ -187,6 +218,16 @@ $('g-transparansi').innerHTML=D.transparansi.map(([i,t,d])=>`<a href="#" class="
 $('g-stat').innerHTML=D.stat.map(([n,l])=>`<div><b class="block text-4xl sm:text-5xl font-extrabold text-[#34d3b0]">${n}</b><span class="mt-1 block font-semibold">${l}</span></div>`).join('');
 $('g-umkm').innerHTML=D.umkm.map(([n,k,r,d,i,g])=>`<article class="card hov overflow-hidden flex flex-col">${photo(i,g)}<div class="p-5 flex flex-col flex-1"><div class="flex items-center gap-2 text-xs"><span class="font-bold text-em-600 bg-em-50 px-2.5 py-1 rounded-full">${k}</span><span class="text-slate-500">${r}</span></div><h3 class="mt-3 font-bold text-navy">${n}</h3><p class="mt-1 text-sm flex-1">${d}</p><a href="#" class="btn btn-o !min-h-[44px] !py-2 mt-4 text-sm">Lihat Detail</a></div></article>`).join('');
 $('g-kontak').innerHTML=D.kontak.map(([i,t,n])=>`<div class="card p-5 flex items-center gap-4">${box(i,'shrink-0')}<div class="flex-1 min-w-0"><b class="block text-navy">${t}</b><span class="text-sm">${n}</span></div><a href="tel:${n.replace(/[^0-9]/g,'')}" aria-label="Telepon ${t}" class="w-12 h-12 rounded-full bg-em text-white flex items-center justify-center hover:bg-em-600">${ic('phone','w-5 h-5')}</a></div>`).join('');
+
+/* ===== LOKASI — ganti koordinat/alamat di sini ===== */
+const LOK={lat:'-6.307044435730768',lng:'106.96933546532226',alamat:'[GANTI: alamat lengkap sekretariat RW 17, kelurahan, kecamatan, kota]',
+info:[['building-2','Lokasi Sekretariat RW','Sekretariat RW 17, Vila Nusa Indah'],['map','Wilayah RW 17','Mencakup 8 RT di lingkungan Vila Nusa Indah [GANTI jika perlu]'],['phone','Kontak Pengurus','[GANTI: nama & nomor pengurus]'],['navigation','Petunjuk Arah','Gunakan tombol Petunjuk Arah untuk navigasi dari lokasi Anda']]};
+const ll=LOK.lat+','+LOK.lng;
+$('lok-koor').textContent=ll;$('lok-alamat').textContent=LOK.alamat;
+$('lok-maps').href='https://www.google.com/maps/search/?api=1&query='+ll;
+$('lok-dir').href='https://www.google.com/maps/dir/?api=1&destination='+ll;
+$('lok-frame').src='https://maps.google.com/maps?q='+ll+'&z=18&hl=id&output=embed';
+$('lok-info').innerHTML=LOK.info.map(([i,t,d])=>`<li class="flex gap-3">${box(i,'!w-10 !h-10 !rounded-xl shrink-0')}<div class="min-w-0"><b class="block text-navy text-sm">${t}</b><span class="text-sm">${d}</span></div></li>`).join('');
 
 const b=$('burger'),m=$('nav-m');b.onclick=()=>{m.classList.toggle('hidden');b.setAttribute('aria-expanded',!m.classList.contains('hidden'))};
 m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>m.classList.add('hidden')));
