@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RW 17 Vila Nusa Indah – Portal Resmi Warga</title>
+<meta name="description" content="Portal informasi dan layanan warga RW 17 Vila Nusa Indah.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+tailwind.config={theme:{extend:{fontFamily:{sans:['"Plus Jakarta Sans"','system-ui','sans-serif']},colors:{navy:{DEFAULT:'#0f2a4a',700:'#173a63',900:'#091c33'},em:{DEFAULT:'#0f9d82',50:'#e8f7f3',600:'#0b7f69'}}}}}
+</script>
+<style>
+html,body{overflow-x:hidden}
+.card{background:#fff;border:1px solid #e5eaf0;border-radius:1.25rem;box-shadow:0 2px 12px rgba(15,42,74,.05)}
+.card.hov{transition:box-shadow .2s,transform .2s}.card.hov:hover{box-shadow:0 10px 28px rgba(15,42,74,.12);transform:translateY(-3px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.75rem 1.5rem;border-radius:.9rem;font-weight:700;transition:.2s}
+.btn-p{background:#0f9d82;color:#fff}.btn-p:hover{background:#0b7f69}
+.btn-o{border:1.5px solid #0f2a4a;color:#0f2a4a}.btn-o:hover{background:#0f2a4a;color:#fff}
+.sec{padding:4.5rem 1rem}
+a:focus-visible,button:focus-visible{outline:3px solid #0f9d82;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+<div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between gap-4">
+<a href="#beranda" class="flex items-center gap-3 shrink-0">
+<svg viewBox="0 0 48 48" class="w-11 h-11" aria-hidden="true"><rect width="48" height="48" rx="13" fill="#0f2a4a"/><path d="M8 24 24 10l16 14" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 24v14h24V24" fill="#173a63"/><circle cx="17" cy="27" r="2.3" fill="#34d3b0"/><path d="M13 36c0-3 8-3 8 0" fill="#34d3b0"/><text x="30" y="36" font-family="sans-serif" font-size="11" font-weight="800" fill="#fff" text-anchor="middle">17</text><path d="M4 42c6-4 10 2 16-1" stroke="#34d3b0" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+<span class="leading-tight"><b class="block text-navy text-lg font-extrabold">RW 17</b><span class="block text-sm font-semibold text-em">Vila Nusa Indah</span><span class="hidden xl:block text-[10px] text-slate-500">Bersama Warga, Membangun Lingkungan Nyaman dan Harmonis</span></span>
+</a>
+<nav class="hidden lg:flex items-center gap-5 text-sm font-semibold text-slate-600" id="nav-d"></nav>
+<a href="#layanan" class="hidden lg:inline-flex btn btn-p !min-h-[44px] !py-2 text-sm">Layanan Warga</a>
+<button id="burger" class="lg:hidden p-3 rounded-xl border border-slate-200" aria-label="Buka menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+</div>
+<div id="nav-m" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 py-3"><div id="nav-ml" class="grid gap-1"></div><a href="#layanan" class="btn btn-p w-full mt-3">Layanan Warga</a></div>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="beranda" class="bg-gradient-to-b from-em-50/70 to-white px-4 pt-12 pb-16 lg:pt-20">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="inline-flex items-center gap-2 bg-em-50 text-em-600 text-sm font-bold px-3.5 py-1.5 rounded-full border border-em/20"><i data-lucide="badge-check" class="w-4 h-4"></i>Portal Resmi Warga</span>
+<h1 class="mt-5 text-4xl sm:text-5xl font-extrabold text-navy leading-[1.1]">Selamat Datang di <span class="text-em">RW 17</span> Vila Nusa Indah</h1>
+<p class="mt-4 text-lg font-semibold text-navy-700">Bersama Warga, Membangun Lingkungan Nyaman dan Harmonis</p>
+<p class="mt-4 max-w-xl leading-relaxed">Portal informasi dan layanan warga RW 17 Vila Nusa Indah. Temukan informasi lingkungan, pengumuman, agenda kegiatan, pelayanan warga, transparansi, serta berbagai kabar terbaru dari lingkungan kita.</p>
+<div class="mt-7 flex flex-col sm:flex-row gap-3">
+<a href="#layanan" class="btn btn-p">Jelajahi Layanan<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+<a href="#pengumuman" class="btn btn-o">Pengumuman Terbaru</a></div>
+<ul class="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-navy">
+<li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-em"></i>Informasi Terpercaya</li>
+<li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-em"></i>Pelayanan Mudah</li>
+<li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-em"></i>Warga Lebih Terhubung</li></ul>
+</div>
+<div class="relative">
+<!-- GANTI: ilustrasi ini dapat diganti foto lingkungan asli -->
+<svg viewBox="0 0 600 460" class="w-full rounded-[2rem] shadow-xl" role="img" aria-label="Ilustrasi lingkungan perumahan hijau dengan warga">
+<defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfeef0"/><stop offset="1" stop-color="#f4fbf8"/></linearGradient></defs>
+<rect width="600" height="460" fill="url(#sk)"/><circle cx="500" cy="80" r="38" fill="#ffe6a3"/>
+<path d="M0 300c120-40 240-20 340-45s180-10 260 5v200H0z" fill="#b9e4c9"/>
+<path d="M0 350c150-30 300-10 600-20v130H0z" fill="#8fd1a8"/>
+<path d="M120 460 270 340h60l190 120z" fill="#d9dee5"/><path d="M265 460 300 340" stroke="#fff" stroke-width="4" stroke-dasharray="14 12"/>
+<g><rect x="50" y="230" width="150" height="100" fill="#fff"/><path d="M38 232 125 165l87 67z" fill="#173a63"/><rect x="75" y="265" width="30" height="65" fill="#0f9d82"/><rect x="125" y="255" width="50" height="38" fill="#cfeef0"/></g>
+<g><rect x="390" y="215" width="160" height="115" fill="#fff"/><path d="M378 218 470 145l92 73z" fill="#0f2a4a"/><rect x="480" y="260" width="32" height="70" fill="#34d3b0"/><rect x="410" y="250" width="50" height="40" fill="#cfeef0"/></g>
+<g fill="#2f9e6a"><circle cx="230" cy="285" r="26"/><circle cx="345" cy="270" r="20"/><circle cx="25" cy="290" r="28"/></g><g fill="#7a5a3a"><rect x="227" y="300" width="6" height="30"/><rect x="342" y="285" width="6" height="25"/></g>
+<g><circle cx="215" cy="385" r="11" fill="#f1c9a5"/><path d="M200 440v-42c0-8 30-8 30 0v42z" fill="#0f2a4a"/><circle cx="262" cy="392" r="11" fill="#e5b58f"/><path d="M247 445v-42c0-8 30-8 30 0v42z" fill="#0f9d82"/><circle cx="310" cy="400" r="9" fill="#f1c9a5"/><path d="M298 450v-35c0-7 24-7 24 0v35z" fill="#f59e0b"/></g>
+</svg>
+<div class="absolute -bottom-6 left-4 sm:left-8 card px-5 py-4 flex items-center gap-3 !shadow-xl">
+<span class="w-11 h-11 rounded-xl bg-em-50 text-em flex items-center justify-center"><i data-lucide="home"></i></span>
+<span><b class="block text-navy">RW 17 Vila Nusa Indah</b><span class="text-sm text-slate-500">Lingkungan Nyaman • Warga Harmonis</span></span></div>
+</div></div></section>
+
+<!-- LAYANAN CEPAT -->
+<section id="layanan" class="sec"><div class="max-w-7xl mx-auto">
+<div id="h-layanan"></div><div id="g-layanan" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div></div></section>
+
+<!-- PENGUMUMAN -->
+<section id="pengumuman" class="sec bg-slate-50"><div class="max-w-7xl mx-auto">
+<div id="h-pengumuman"></div><div id="g-pengumuman" class="mt-10 grid md:grid-cols-3 gap-5"></div>
+<div class="mt-8 text-center"><a href="#" class="font-bold text-em-600 hover:underline inline-flex items-center gap-1">Lihat Semua Pengumuman <i data-lucide="arrow-right" class="w-4 h-4"></i></a></div></div></section>
+
+<!-- AGENDA -->
+<section id="agenda" class="sec"><div class="max-w-7xl mx-auto">
+<div id="h-agenda"></div><div id="g-agenda" class="mt-10 grid md:grid-cols-3 gap-5"></div>
+<div class="mt-8 text-center"><a href="#" class="btn btn-o">Lihat Semua Agenda</a></div></div></section>
+
+<!-- BERITA -->
+<section id="berita" class="sec bg-slate-50"><div class="max-w-7xl mx-auto">
+<div id="h-berita"></div><div id="g-berita" class="mt-10 grid md:grid-cols-3 gap-5"></div></div></section>
+
+<!-- ADMINISTRASI -->
+<section class="sec"><div class="max-w-7xl mx-auto rounded-[2rem] bg-em-50 border border-em/20 p-6 sm:p-12">
+<div class="grid lg:grid-cols-2 gap-10 items-center">
+<div><h2 class="text-3xl sm:text-4xl font-extrabold text-navy">Pelayanan Warga Lebih Mudah</h2>
+<p class="mt-3 max-w-lg">Dapatkan informasi berbagai kebutuhan administrasi warga RW 17 Vila Nusa Indah dengan mudah.</p>
+<ul id="l-adm" class="mt-6 grid sm:grid-cols-2 gap-3"></ul>
+<a href="#layanan" class="btn btn-p mt-8">Lihat Layanan Warga</a></div>
+<ol id="alur" class="grid gap-4"></ol></div></div></section>
+
+<!-- ASPIRASI -->
+<section id="aspirasi" class="px-4"><div class="max-w-7xl mx-auto rounded-[2rem] bg-navy text-white p-8 sm:p-14 grid lg:grid-cols-[1.4fr_1fr] gap-8 items-center relative overflow-hidden">
+<div><h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Punya Aspirasi atau Menemukan Masalah di Lingkungan?</h2>
+<p class="mt-4 text-slate-300 max-w-2xl">Partisipasi Anda membantu RW 17 Vila Nusa Indah menjadi lingkungan yang semakin aman, nyaman, dan harmonis.</p>
+<div id="kat" class="mt-6 flex flex-wrap gap-2"></div></div>
+<div class="lg:text-right"><a href="#kontak" class="btn bg-white text-navy hover:bg-em-50 w-full sm:w-auto"><i data-lucide="megaphone" class="w-5 h-5"></i>Sampaikan Aspirasi</a></div></div></section>
+
+<!-- TRANSPARANSI -->
+<section id="transparansi" class="sec"><div class="max-w-7xl mx-auto">
+<div id="h-transparansi"></div><div id="g-transparansi" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+<div class="mt-8 text-center"><a href="#" class="btn btn-p">Lihat Informasi Transparansi</a></div></div></section>
+
+<!-- STATISTIK -->
+<section class="px-4 pb-4"><div class="max-w-7xl mx-auto rounded-[2rem] bg-gradient-to-br from-navy to-navy-700 text-white p-8 sm:p-12">
+<div id="g-stat" class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center"></div>
+<p class="mt-8 text-center text-xs text-slate-300">*Angka contoh (dummy) – ganti dengan data resmi RW 17 pada objek <code>DATA.stat</code> di bagian script.</p></div></section>
+
+<!-- UMKM -->
+<section id="umkm" class="sec"><div class="max-w-7xl mx-auto">
+<div id="h-umkm"></div><div id="g-umkm" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+<div class="mt-8 text-center"><a href="#" class="btn btn-o">Jelajahi UMKM Warga</a></div></div></section>
+
+<!-- KONTAK -->
+<section id="kontak" class="sec bg-slate-50"><div class="max-w-7xl mx-auto">
+<div id="h-kontak"></div><div id="g-kontak" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+<p class="mt-5 text-center text-xs text-slate-500">*Nomor telepon adalah placeholder – ganti pada <code>DATA.kontak</code>.</p></div></section>
+
+<!-- CTA PENUTUP -->
+<section id="profil" class="sec"><div class="max-w-5xl mx-auto text-center">
+<span class="mx-auto w-14 h-14 rounded-2xl bg-em-50 text-em flex items-center justify-center"><i data-lucide="hand-heart"></i></span>
+<h2 class="mt-5 text-3xl sm:text-5xl font-extrabold text-navy">Bersama untuk RW 17 yang Lebih Baik</h2>
+<p class="mt-5 text-lg max-w-3xl mx-auto leading-relaxed">Gotong royong, kepedulian, dan partisipasi warga adalah kekuatan utama dalam menciptakan lingkungan Vila Nusa Indah yang aman, nyaman, bersih, dan harmonis.</p>
+<a href="#kontak" class="btn btn-p mt-8">Hubungi Pengurus</a></div></section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-navy-900 text-slate-300 px-4 pt-14 pb-8"><div class="max-w-7xl mx-auto">
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+<div><b class="text-white text-xl">RW 17 Vila Nusa Indah</b><p class="mt-2 text-em font-semibold text-sm">Bersama Warga, Membangun Lingkungan Nyaman dan Harmonis</p><p class="mt-3 text-sm">Portal informasi dan pelayanan warga RW 17 Vila Nusa Indah.</p></div>
+<div><b class="text-white">Informasi</b><ul class="mt-3 space-y-2 text-sm"><li><a class="hover:text-white" href="#profil">Profil</a></li><li><a class="hover:text-white" href="#pengumuman">Pengumuman</a></li><li><a class="hover:text-white" href="#agenda">Agenda</a></li><li><a class="hover:text-white" href="#berita">Berita</a></li></ul></div>
+<div><b class="text-white">Layanan Warga</b><ul class="mt-3 space-y-2 text-sm"><li><a class="hover:text-white" href="#layanan">Administrasi</a></li><li><a class="hover:text-white" href="#aspirasi">Pengaduan</a></li><li><a class="hover:text-white" href="#transparansi">Transparansi</a></li><li><a class="hover:text-white" href="#umkm">UMKM</a></li></ul></div>
+<div><b class="text-white">Hubungi Kami</b><ul class="mt-3 space-y-2 text-sm">
+<li class="flex gap-2"><i data-lucide="map-pin" class="w-4 h-4 mt-0.5 shrink-0"></i><span>Sekretariat RW 17 Vila Nusa Indah<br>[GANTI: alamat lengkap]</span></li>
+<li class="flex gap-2"><i data-lucide="message-circle" class="w-4 h-4 mt-0.5"></i>WhatsApp: [GANTI: 08xx-xxxx-xxxx]</li>
+<li class="flex gap-2"><i data-lucide="mail" class="w-4 h-4 mt-0.5"></i>Email: [GANTI: rw17@contoh.id]</li></ul></div></div>
+<div class="mt-12 pt-6 border-t border-white/10 text-sm text-center sm:text-left sm:flex justify-between gap-2">
+<p>© 2026 RW 17 Vila Nusa Indah. Seluruh Hak Dilindungi.</p><p class="text-slate-400 mt-1 sm:mt-0">Dibangun untuk mendukung informasi, pelayanan, dan kebersamaan warga.</p></div></div></footer>
+
+<script>
+/* ===== DATA DUMMY — ganti dengan data asli RW 17 ===== */
+const DATA={
+nav:[['Beranda','#beranda'],['Profil','#profil'],['Pengumuman','#pengumuman'],['Agenda','#agenda'],['Berita','#berita'],['Layanan','#layanan'],['Transparansi','#transparansi'],['UMKM Warga','#umkm'],['Kontak','#kontak']],
+layanan:[['file-text','Pengajuan Surat','Informasi dan pengajuan kebutuhan administrasi warga.'],['message-square-warning','Pengaduan Warga','Sampaikan laporan atau permasalahan lingkungan.'],['calendar-days','Agenda Kegiatan','Lihat jadwal kegiatan RW 17.'],['wallet','Informasi Kas','Transparansi keuangan lingkungan.'],['shield-check','Jadwal Keamanan','Informasi jadwal ronda dan keamanan lingkungan.'],['phone-call','Kontak Penting','Nomor pengurus dan layanan darurat.']],
+pengumuman:[['Kegiatan','Kerja Bakti Lingkungan RW 17','Mari bersama menjaga kebersihan dan kenyamanan lingkungan Vila Nusa Indah.','em'],['Informasi','Pemeliharaan Fasilitas Lingkungan','Informasi jadwal pemeliharaan fasilitas umum di lingkungan RW 17.','sky'],['Penting','Pertemuan Warga RW 17','Pertemuan rutin warga untuk membahas program dan kegiatan lingkungan.','orange']],
+agenda:[['11','OKT','Kerja Bakti Lingkungan','07:00 WIB','Lingkungan RW 17'],['15','OKT','Kegiatan Posyandu','08:00 WIB','Balai Warga'],['18','OKT','Pertemuan Warga','19:30 WIB','Sekretariat RW 17']],
+berita:[['Gotong Royong','4 Okt 2026','Semangat Gotong Royong Warga RW 17','Warga dari seluruh RT bahu-membahu merapikan saluran air dan taman lingkungan.','hand-heart','from-emerald-200 to-teal-100'],['Kesehatan','2 Okt 2026','Kegiatan Posyandu untuk Warga Vila Nusa Indah','Pemeriksaan rutin balita dan lansia berlangsung tertib dan penuh keceriaan.','heart-pulse','from-sky-200 to-cyan-100'],['Kebersamaan','28 Sep 2026','Kemeriahan Kegiatan Warga RW 17','Lomba dan hiburan keluarga mempererat keakraban antarwarga.','party-popper','from-amber-200 to-orange-100']],
+adm:['Surat Pengantar','Pengantar Domisili','Pengantar SKCK','Pengantar Usaha','Administrasi lainnya'],
+alur:[['list-checks','Pilih Layanan'],['clipboard-pen','Lengkapi Data'],['badge-check','Verifikasi'],['party-popper','Selesai']],
+kat:['Kebersihan','Keamanan','Jalan','Lampu Jalan','Fasilitas Umum','Lainnya'],
+transparansi:[['wallet','Kas RW','Pemasukan dan pengeluaran kas lingkungan.'],['target','Program Kerja','Rencana kegiatan RW sepanjang tahun.'],['clipboard-check','Realisasi Kegiatan','Hasil dan dokumentasi kegiatan yang telah berjalan.'],['file-bar-chart','Laporan Lingkungan','Ringkasan kondisi dan kebutuhan lingkungan.']],
+stat:[['1.200+','Warga'],['350+','Kepala Keluarga'],['8','RT'],['40+','UMKM Warga']],
+umkm:[['Dapur Bu Sari','Kuliner','RT 03','Katering harian dan kue basah untuk acara keluarga.','utensils','from-orange-200 to-amber-100'],['Warung Nusa','Kebutuhan Harian','RT 05','Sembako dan kebutuhan rumah tangga dekat rumah.','store','from-emerald-200 to-lime-100'],['Kriya Hijau','Kerajinan','RT 02','Tanaman hias, pot, dan kerajinan daur ulang.','sprout','from-teal-200 to-cyan-100'],['Laundry Cepat 17','Jasa','RT 07','Cuci kiloan dan setrika dengan antar-jemput.','shirt','from-sky-200 to-indigo-100']],
+kontak:[['shield','Keamanan RW','0812-0000-0001'],['ambulance','Ambulans','0812-0000-0002'],['flame','Pemadam Kebakaran','113'],['siren','Polisi','110'],['zap','PLN','123'],['hospital','Puskesmas','0812-0000-0006']]
+};
+const H={layanan:['Layanan Warga','Akses berbagai informasi dan kebutuhan warga dengan lebih mudah.'],pengumuman:['Pengumuman Terbaru','Informasi penting dan terbaru untuk warga RW 17 Vila Nusa Indah.'],agenda:['Agenda RW 17','Jangan lewatkan kegiatan di lingkungan kita.'],berita:['Kabar dari Lingkungan Kita','Cerita, kegiatan, dan kebersamaan warga RW 17 Vila Nusa Indah.'],transparansi:['Transparansi untuk Warga','Membangun kepercayaan melalui keterbukaan informasi lingkungan.'],umkm:['UMKM Warga RW 17','Dari warga, oleh warga, untuk mendukung ekonomi lingkungan kita.'],kontak:['Kontak Penting & Darurat','Simpan nomor ini untuk keadaan mendesak.']};
+const $=id=>document.getElementById(id), D=DATA;
+const ic=(n,c='')=>`<i data-lucide="${n}" class="${c}"></i>`;
+const box=(i,c='')=>`<span class="w-12 h-12 rounded-2xl bg-em-50 text-em flex items-center justify-center ${c}">${ic(i)}</span>`;
+const badge={em:'bg-em-50 text-em-600',sky:'bg-sky-50 text-sky-700',orange:'bg-orange-100 text-orange-700'};
+const photo=(i,g)=>`<div class="h-44 bg-gradient-to-br ${g} flex items-center justify-center text-navy/40 relative"><i data-lucide="${i}" class="w-14 h-14"></i><span class="absolute bottom-2 right-3 text-[10px] text-navy/50">foto placeholder</span></div>`;
+const link=t=>`<a href="#" class="mt-4 inline-flex items-center gap-1 text-sm font-bold text-em-600 hover:underline">${t} ${ic('arrow-right','w-4 h-4')}</a>`;
+
+D.nav.forEach(([t,h])=>{$('nav-d').insertAdjacentHTML('beforeend',`<a href="${h}" class="hover:text-em transition">${t}</a>`);$('nav-ml').insertAdjacentHTML('beforeend',`<a href="${h}" class="px-3 py-3 rounded-xl font-semibold hover:bg-em-50">${t}</a>`)});
+for(const k in H)$('h-'+k).innerHTML=`<div class="max-w-2xl"><h2 class="text-3xl sm:text-4xl font-extrabold text-navy">${H[k][0]}</h2><p class="mt-2 text-lg">${H[k][1]}</p></div>`;
+$('g-layanan').innerHTML=D.layanan.map(([i,t,d])=>`<a href="#" class="card hov p-6 block">${box(i)}<h3 class="mt-4 font-bold text-navy text-lg">${t}</h3><p class="mt-1 text-sm">${d}</p></a>`).join('');
+$('g-pengumuman').innerHTML=D.pengumuman.map(([b,t,d,c])=>`<article class="card hov p-6"><span class="text-xs font-bold px-3 py-1 rounded-full ${badge[c]}">${b}</span><h3 class="mt-4 font-bold text-navy text-xl leading-snug">${t}</h3><p class="mt-2 text-sm leading-relaxed">${d}</p>${link('Baca selengkapnya')}</article>`).join('');
+$('g-agenda').innerHTML=D.agenda.map(([d,m,t,j,l])=>`<article class="card hov p-5 flex gap-4 items-center"><div class="w-20 shrink-0 rounded-2xl bg-navy text-white text-center py-3"><b class="block text-3xl leading-none">${d}</b><span class="text-xs font-semibold tracking-wide text-em-50">${m}</span></div><div><h3 class="font-bold text-navy">${t}</h3><p class="mt-1 text-sm flex items-center gap-1.5">${ic('clock','w-4 h-4 text-em')}${j}</p><p class="text-sm flex items-center gap-1.5">${ic('map-pin','w-4 h-4 text-em')}${l}</p></div></article>`).join('');
+$('g-berita').innerHTML=D.berita.map(([k,tg,t,d,i,g])=>`<article class="card hov overflow-hidden">${photo(i,g)}<div class="p-6"><div class="flex items-center gap-3 text-xs"><span class="font-bold text-em-600 bg-em-50 px-2.5 py-1 rounded-full">${k}</span><span class="text-slate-500">${tg}</span></div><h3 class="mt-3 font-bold text-navy text-lg leading-snug">${t}</h3><p class="mt-2 text-sm">${d}</p>${link('Baca selengkapnya')}</div></article>`).join('');
+$('l-adm').innerHTML=D.adm.map(t=>`<li class="flex items-center gap-2 font-semibold text-navy">${ic('check-circle-2','w-5 h-5 text-em shrink-0')}${t}</li>`).join('');
+$('alur').innerHTML=D.alur.map(([i,t],n)=>`<li class="card p-4 flex items-center gap-4"><span class="w-11 h-11 rounded-full bg-em text-white font-extrabold flex items-center justify-center shrink-0">${n+1}</span><b class="text-navy flex-1">${t}</b><span class="text-em">${ic(i)}</span></li>`).join('');
+$('kat').innerHTML=D.kat.map(k=>`<span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-semibold">${k}</span>`).join('');
+$('g-transparansi').innerHTML=D.transparansi.map(([i,t,d])=>`<a href="#" class="card hov p-6 block">${box(i)}<h3 class="mt-4 font-bold text-navy">${t}</h3><p class="mt-1 text-sm">${d}</p></a>`).join('');
+$('g-stat').innerHTML=D.stat.map(([n,l])=>`<div><b class="block text-4xl sm:text-5xl font-extrabold text-[#34d3b0]">${n}</b><span class="mt-1 block font-semibold">${l}</span></div>`).join('');
+$('g-umkm').innerHTML=D.umkm.map(([n,k,r,d,i,g])=>`<article class="card hov overflow-hidden flex flex-col">${photo(i,g)}<div class="p-5 flex flex-col flex-1"><div class="flex items-center gap-2 text-xs"><span class="font-bold text-em-600 bg-em-50 px-2.5 py-1 rounded-full">${k}</span><span class="text-slate-500">${r}</span></div><h3 class="mt-3 font-bold text-navy">${n}</h3><p class="mt-1 text-sm flex-1">${d}</p><a href="#" class="btn btn-o !min-h-[44px] !py-2 mt-4 text-sm">Lihat Detail</a></div></article>`).join('');
+$('g-kontak').innerHTML=D.kontak.map(([i,t,n])=>`<div class="card p-5 flex items-center gap-4">${box(i,'shrink-0')}<div class="flex-1 min-w-0"><b class="block text-navy">${t}</b><span class="text-sm">${n}</span></div><a href="tel:${n.replace(/[^0-9]/g,'')}" aria-label="Telepon ${t}" class="w-12 h-12 rounded-full bg-em text-white flex items-center justify-center hover:bg-em-600">${ic('phone','w-5 h-5')}</a></div>`).join('');
+
+const b=$('burger'),m=$('nav-m');b.onclick=()=>{m.classList.toggle('hidden');b.setAttribute('aria-expanded',!m.classList.contains('hidden'))};
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>m.classList.add('hidden')));
+lucide.createIcons();
+</script>
+</body>
+</html>
